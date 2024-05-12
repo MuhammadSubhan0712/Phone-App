@@ -7,7 +7,8 @@ const phones = [
         ram: 8,
         rom: 256,
         camera: '20 megapixel',
-        price: 15000
+        price: 15000 ,
+        img: "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s20-1.jpg"  
     },
     {
         brand: 'Xiomi',
@@ -15,7 +16,8 @@ const phones = [
         ram: 4,
         rom: 64,
         camera: '10 megapixel',
-        price: 15000
+        price: 15000 ,
+        img: "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-redmi-note10-1.jpg" 
     },
     {
         brand: 'Infinix',
@@ -23,7 +25,8 @@ const phones = [
         ram: 2,
         rom: 16,
         camera: '5 megapixel',
-        price: 15000
+        price: 15000 ,
+        img: "https://fdn2.gsmarena.com/vv/pics/infinix/infinix-zero-x-pro-.jpg" 
     },
     {
         brand: 'Tecno',
@@ -31,7 +34,8 @@ const phones = [
         ram: 12,
         rom: 512,
         camera: '25 megapixel',
-        price: 15000
+        price: 15000 ,
+        img: "https://fdn2.gsmarena.com/vv/pics/tecno/tecno-spark10-pro-.jpg" 
     },
     {
         brand: 'Iphone',
@@ -39,7 +43,8 @@ const phones = [
         ram: 4,
         rom: 1024,
         camera: '30 megapixel',
-        price: 15000
+        price: 15000 ,
+        img: "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-14-pro-5.jpg" 
     },
     {
         brand: 'Oppo',
@@ -47,7 +52,8 @@ const phones = [
         ram: 8,
         rom: 256,
         camera: '20 megapixel',
-        price: 15000
+        price: 15000 ,
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_qC-ygXLWzEkoQqQ1gHNg6LDLiH6KZ63WXg8tTiURyA&s" 
     },
     {
         brand: 'Vivo',
@@ -55,7 +61,8 @@ const phones = [
         ram: 4,
         rom: 64,
         camera: '8 megapixel',
-        price: 15000
+        price: 15000 ,
+        img: "https://hamariweb.com/mobiles/LargeImages/5713_02.jpg" 
     },
     {
         brand: 'Samsung',
@@ -63,7 +70,8 @@ const phones = [
         ram: 50,
         rom: 1024,
         camera: '60 megapixel',
-        price: 300000
+        price: 300000 ,
+        img: "https://hamariweb.com/mobiles/LargeImages/5713_02.jpg" 
     },
 
 ]
@@ -83,6 +91,7 @@ function renderItems (){
     for(let i = 0; i < phones.length; i++){
         div.innerHTML += `
         <div class="card bg-dark text-light border-light" style="width: 18rem;">
+        <img src = "${phones[i].img}" class > 
             <div class="card-body">
                 <h5 class="card-title">${phones[i].brand +' '+ phones[i].model}</h5>
                 <p class="card-text">Rs ${phones[i].price}</p>
