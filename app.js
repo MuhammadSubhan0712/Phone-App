@@ -71,7 +71,7 @@ const phones = [
         rom: 1024,
         camera: '60 megapixel',
         price: 300000 ,
-        img: "https://hamariweb.com/mobiles/LargeImages/5713_02.jpg" 
+        img: "https://static1.pocketlintimages.com/wordpress/wp-content/uploads/151054-phones-feature-samsung-s20-colours-all-the-colors-for-the-151054-samsung-galaxy-s20-s20-and-s20-ultra-image1-n9epogbhhf.jpg" 
     },
 
 ]

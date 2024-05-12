@@ -11,6 +11,7 @@ function renderItems (){
             console.log(cartItems[i]);
             div.innerHTML += `
             <div class="border border-light rounded m-5 p-3">
+            
             <h1>Model: ${cartItems[i].brand + ' ' + cartItems[i].model}</h1>
             <h1>Price: ${cartItems[i].price}</h1>
             </div>
