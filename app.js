@@ -74,8 +74,6 @@ const phones = [
         img: "https://static1.pocketlintimages.com/wordpress/wp-content/uploads/151054-phones-feature-samsung-s20-colours-all-the-colors-for-the-151054-samsung-galaxy-s20-s20-and-s20-ultra-image1-n9epogbhhf.jpg" 
     },
 
-    // -----------------------------------------------------------
-
     {
         brand: 'Samsung',
         model: 'A14',
@@ -252,8 +250,8 @@ const div = document.querySelector('.products');
 function renderItems (){
     for(let i = 0; i < phones.length; i++){
         div.innerHTML += `
-        <div class="card bg-dark text-light border-light" style="width: 18rem;">
-        <img src = "${phones[i].img}" class > 
+        <div class="card bg-secondary text-light border-light  " style="width: 18rem;">
+        <img src = "${phones[i].img}"  class="card-img-top"  > 
             <div class="card-body">
                 <h5 class="card-title">${phones[i].brand +' '+ phones[i].model}</h5>
                 <p class="card-text">Ram 
