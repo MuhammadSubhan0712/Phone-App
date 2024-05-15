@@ -61,7 +61,7 @@ const phones = [
         ram: '4GB',
         rom: '64GB',
         camera: '8 megapixel',
-        price: 270009 ,
+        price: 27000 ,
         img: "https://hamariweb.com/mobiles/LargeImages/5713_02.jpg" 
     },
     {
@@ -250,8 +250,8 @@ const div = document.querySelector('.products');
 function renderItems (){
     for(let i = 0; i < phones.length; i++){
         div.innerHTML += `
-        <div class="card bg-secondary text-light border-light  " style="width: 18rem;">
-        <img src = "${phones[i].img}"  class="card-img-top"  > 
+        <div id="card" class="card bg-secondary text-light border-light  " style="width: 18rem;">
+        <img src = "${phones[i].img}"  class="" id="card-img"  > 
             <div class="card-body">
                 <h5 class="card-title">${phones[i].brand +' '+ phones[i].model}</h5>
                 <p class="card-text">Ram 

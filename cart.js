@@ -9,16 +9,18 @@ function renderItems (){
     if(cartItems != null && cartItems.length > 0){
         for(let i = 0; i < cartItems.length; i++){
             console.log(cartItems[i]);
+            total += cartItems[i].price
             div.innerHTML += `
             <div class="bg-secondary  border border-light rounded m-5 p-3">
             <h1>Model: ${cartItems[i].brand + ' ' + cartItems[i].model}</h1>
             <h1>Quantity:  </h1>
             <h1>Price: ${cartItems[i].price}</h1>
-
-            <h1>Total Amount = ${cartItems[i].price} </h1>
             </div>
             `
         }
+        div.innerHTML +=`
+        <h1>Total Amount = ${cartItems[i].total} </h1>`
+
     }
     else{
         console.log('Cart items are Empty!!!')
