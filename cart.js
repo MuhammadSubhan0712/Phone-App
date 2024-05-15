@@ -19,7 +19,8 @@ function renderItems (){
             </div>
             `
         }
-    }else{
+    }
+    else{
         console.log('Cart items are Empty!!!')
         div.innerHTML = `
         <h3 class="text-center">No Items Found...</h3>
