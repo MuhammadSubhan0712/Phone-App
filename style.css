@@ -8,7 +8,7 @@ h1{
 }
 
 span{
-
+font-family: Georgia, 'Times New Roman', Times, serif;
 }
 #phone-container{
     font-family: Georgia, Times, 'Times New Roman', serif;
@@ -32,6 +32,9 @@ span{
     font-family: Georgia, Times, 'Times New Roman', serif;
 }
 #cart-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     background-color: rgb(145, 92, 45);
     font-family: Georgia, Times, 'Times New Roman', serif;
 
