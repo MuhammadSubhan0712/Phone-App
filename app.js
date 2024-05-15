@@ -11,7 +11,7 @@ const phones = [
         img: "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s20-1.jpg"  
     },
     {
-        brand: 'Xiomi',
+        brand: 'Xiaomi',
         model: 'note10',
         ram: '4GB',
         rom: '64GB',

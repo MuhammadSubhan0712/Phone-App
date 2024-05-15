@@ -11,15 +11,15 @@ function renderItems (){
             console.log(cartItems[i]);
             total += cartItems[i].price
             div.innerHTML += `
-            <div class="bg-secondary  border border-light rounded m-5 p-3">
-            <h1>Model: ${cartItems[i].brand + ' ' + cartItems[i].model}</h1>
-            <h1>Quantity:  </h1>
-            <h1>Price: ${cartItems[i].price}</h1>
+            <div id="cart-container" class=" border border-light rounded m-5 p-3">
+            <h2>Model: ${cartItems[i].brand + ' ' + cartItems[i].model}</h2>
+            <h2>Quantity: <button id="QP-btn" >+</button>     <button id="QL-btn">-</button></h2>
+            <h2>Price: ${cartItems[i].price}</h2>
             </div>
             `
         }
         div.innerHTML +=`
-        <h1>Total Amount = ${cartItems[i].total} </h1>`
+        <h2>Total Amount = ${cartItems[i].total} </h2>`
 
     }
     else{
