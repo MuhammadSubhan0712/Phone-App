@@ -78,6 +78,7 @@ padding: 5px;
 width: 100px;
 background-color: rgb(132, 0, 255);
 color: #fff;
+font-family:Helvetica, sans-serif ;
 font-size: 20px;
 font-weight: bold;
 border: none;
@@ -85,6 +86,7 @@ transition: 0.2s ease-in-out;
 }
 
 #btn-filter{
+font-family:Helvetica, sans-serif ;
 font-size: 20px;
 font-weight: bold;
  border: none;
