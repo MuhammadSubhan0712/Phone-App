@@ -14,6 +14,27 @@
 
 <body id="body" class="bg-dark text-white">
     <h1 class="text-center mt-4"> <span>(!)(!)(!) </span> Phones Store <span> (!)(!)(!) </span></h1>
+<div class="mt-4 p-1  d-flex justify-content-evenly">
+    <button onclick="renderItems()">
+        All Items
+    </button>
+    
+    <button onclick="filtereditems('Samsung')">Samsung</button>
+
+    <button onclick="filtereditems('Iphone')">Iphone </button>
+
+    <button onclick="filtereditems('Infinix')"> Infinix</button>
+
+    <button onclick="filtereditems('Tecno')"> Tecno</button>
+
+    <button onclick="filtereditems('Oppo')">Oppo </button>
+
+    <button onclick="filtereditems('Vivo')">Vivo</button>
+
+    <button onclick="filtereditems('Realme')">Realme</button>
+
+    <button onclick="filtereditems('Redmi')">Redmi</button>
+</div>
 
     <div id="phone-container" class="products mt-5 d-flex justify-content-center gap-5 flex-wrap">
 
@@ -23,9 +44,10 @@
         <button onclick="gotocart()" class="btn btn-success">Checkout</button>
     </div>
 
+
+    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-
-
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="app.js"></script>

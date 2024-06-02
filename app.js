@@ -11,7 +11,7 @@ const phones = [
         img: "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s20-1.jpg"  
     },
     {
-        brand: 'Xiaomi',
+        brand: 'Redmi',
         model: 'note10',
         ram: '4GB',
         rom: '64GB',
@@ -105,7 +105,7 @@ const phones = [
     },
 
     {
-        brand: 'Techno',
+        brand: 'Tecno',
         model: 'Camon 18',
         ram: '6GB',
         rom: '128GB',
@@ -247,6 +247,9 @@ if(items === null){
 
 
 const div = document.querySelector('.products');
+
+// There I render all the following Items using "MAP()" method
+
 function renderItems (){
     for(let i = 0; i < phones.length; i++){
         div.innerHTML += `
@@ -255,7 +258,7 @@ function renderItems (){
             <div class="card-body">
                 <h5 class="card-title">${phones[i].brand +' '+ phones[i].model}</h5>
                 <p class="card-text">Ram 
-                ${phones[i].ram} <br> Built-in ${phones[i].rom} <br> Camera ${phones[i].camera} <br>Rs ${phones[i].price}</p>
+                ${phones[i].ram} <br> Built-in ${phones[i].rom} <br> Camera ${phones[i].camera} <br>Rs ${phones[i].price}Rs.</p>
                 <button onclick="addtocart(${i})" class="btn btn-primary">Add to Cart</button>
             </div>
         </div>
@@ -273,7 +276,8 @@ function addtocart(index){
         phones[index].quantity = 1;
         arr.push(phones[index]);
     }
-    console.log(arr);
+  
+    console.log(arr[index]);
 }
 
 function gotocart(){
@@ -281,3 +285,34 @@ function gotocart(){
     localStorage.setItem('cartItems' , JSON.stringify(arr));
     window.location = 'cart.html';
 }
+
+
+
+
+
+
+// There I render only the following Items which user selected using "filter()" method
+//Arrow  Function
+
+let filtereditems = (brands) =>{
+    console.log(brands);
+    div.innerHTML =  "  ";
+    let filtered =  phones.filter((items) => {
+     return items.brand === brands;
+      //Here start the chaining b/w filter() and map() method
+
+    }).map((i) =>{
+        div.innerHTML +=
+        `<div id="card" class="card bg-secondary text-light border-light  " style="width: 18rem;">
+        <img src = "${phones[i].img}" class="" id="card-img"  > 
+            <div class="card-body">
+                <h5 class="card-title">${phones[i].brand +' '+ phones[i].model}</h5>
+                <p class="card-text">Ram 
+                ${phones[i].ram} <br> Built-in ${phones[i].rom} <br> Camera ${phones[i].camera} <br>Rs ${phones[i].price}Rs.</p>
+                <button onclick="addtocart(${i})" class="btn btn-primary">Add to Cart</button>
+            </div>
+        </div>
+        `;
+    });
+    console.log(filtered);
+};
