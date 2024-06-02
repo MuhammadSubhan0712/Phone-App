@@ -294,13 +294,12 @@ function gotocart(){
 // There I render only the following Items which user selected using "filter()" method
 //Arrow  Function
 
-let filtereditems = (brands) =>{
-    console.log(brands);
+let filtereditems = (btn) =>{
+    console.log(btn);
     div.innerHTML =  "  ";
     let filtered =  phones.filter((items) => {
-     return items.brand === brands;
+     return items.brand === btn.innerHTML;
       //Here start the chaining b/w filter() and map() method
-
     }).map((i) =>{
         div.innerHTML +=
         `<div id="card" class="card bg-secondary text-light border-light  " style="width: 18rem;">
