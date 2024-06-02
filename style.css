@@ -81,6 +81,7 @@ color: #fff;
 font-size: 20px;
 font-weight: bold;
 border: none;
+transition: 0.2s ease-in-out;
 }
 
 #btn-filter{
@@ -92,4 +93,16 @@ font-weight: bold;
     width: 100px;
     background-color: rgb(21, 0, 41);
     color: #fff;
+}
+
+#All-items:hover{
+color: rgb(255, 194, 194);
+transition: 0.2s ease-in-out;
+cursor: pointer;
+}
+
+#btn-filter:hover{
+    color: blue;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
 }
