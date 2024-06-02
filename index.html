@@ -12,28 +12,28 @@
 
 </head>
 
-<body id="body" class="bg-dark text-white">
+<body id="body" class="text-white">
     <h1 class="text-center mt-4"> <span>(!)(!)(!) </span> Phones Store <span> (!)(!)(!) </span></h1>
 <div class="mt-4 p-1  d-flex justify-content-evenly">
-    <button onclick="renderItems()">
+    <button id="All-items" onclick="renderItems()">
         All Items
     </button>
     
-    <button onclick="filtereditems('Samsung')">Samsung</button>
+    <button id="btn-filter" onclick="filtereditems('Samsung')">Samsung</button>
 
-    <button onclick="filtereditems('Iphone')">Iphone </button>
+    <button id="btn-filter" onclick="filtereditems('Iphone')">Iphone </button>
 
-    <button onclick="filtereditems('Infinix')"> Infinix</button>
+    <button id="btn-filter" onclick="filtereditems('Infinix')"> Infinix</button>
 
-    <button onclick="filtereditems('Tecno')"> Tecno</button>
+    <button id="btn-filter" onclick="filtereditems('Tecno')"> Tecno</button>
 
-    <button onclick="filtereditems('Oppo')">Oppo </button>
+    <button id="btn-filter" onclick="filtereditems('Oppo')">Oppo </button>
 
-    <button onclick="filtereditems('Vivo')">Vivo</button>
+    <button id="btn-filter" onclick="filtereditems('Vivo')">Vivo</button>
 
-    <button onclick="filtereditems('Realme')">Realme</button>
+    <button id="btn-filter" onclick="filtereditems('Realme')">Realme</button>
 
-    <button onclick="filtereditems('Redmi')">Redmi</button>
+    <button id="btn-filter" onclick="filtereditems('Redmi')">Redmi</button>
 </div>
 
     <div id="phone-container" class="products mt-5 d-flex justify-content-center gap-5 flex-wrap">

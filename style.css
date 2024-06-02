@@ -10,6 +10,10 @@ h1{
 span{
 font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
+#body{
+    background: linear-gradient(30deg, rgb(0, 0, 0) ,rgb(21, 0, 41));
+}
 #phone-container{
     font-family: Georgia, Times, 'Times New Roman', serif;
 }
@@ -63,4 +67,29 @@ transition: ease-in-out;
     transition: 0.3s ease-in-out;
     color: maroon;
     cursor: pointer;
+}
+
+
+/* Filter button id's */
+
+#All-items{
+margin-top: 10px;
+padding: 5px;
+width: 100px;
+background-color: rgb(132, 0, 255);
+color: #fff;
+font-size: 20px;
+font-weight: bold;
+border: none;
+}
+
+#btn-filter{
+font-size: 20px;
+font-weight: bold;
+ border: none;
+    margin-top: 10px;
+    padding: 5px;
+    width: 100px;
+    background-color: rgb(21, 0, 41);
+    color: #fff;
 }

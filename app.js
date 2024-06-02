@@ -296,19 +296,19 @@ function gotocart(){
 
 let filtereditems = (btn) =>{
     console.log(btn);
-    div.innerHTML =  "  ";
+    div.innerHTML =  " "
     let filtered =  phones.filter((item) => {
-     return item.brand === btn;
+     return item.brand === btn
       //Here start the chaining b/w filter() and map() method
-    }).map((items) =>{
+    }).map((K) => {
         div.innerHTML +=
         `<div id="card" class="card bg-secondary text-light border-light  " style="width: 18rem;">
-        <img src = "${phones[items].img}" class="" id="card-img"  > 
+        <img src = "${phones[K].img}" class="" id="card-img"  > 
             <div class="card-body">
-                <h5 class="card-title">${phones[items].brand +' '+ phones[items].model}</h5>
+                <h5 class="card-title">${phones[K].brand +' '+ phones[K].model}</h5>
                 <p class="card-text">Ram 
-                ${phones[items].ram} <br> Built-in ${phones[items].rom} <br> Camera ${phones[items].camera} <br>Price: ${phones[items].price}Rs.</p>
-                <button onclick="addtocart(${items})" class="btn btn-primary">Add to Cart</button>
+                ${phones[K].ram} <br> Built-in ${phones[K].rom} <br> Camera ${phones[K].camera} <br>Price: ${phones[K].price}Rs.</p>
+                <button onclick="addtocart(${K})" class="btn btn-primary">Add to Cart</button>
             </div>
         </div>
         `;
