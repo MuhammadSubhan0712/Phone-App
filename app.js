@@ -246,7 +246,7 @@ if(items === null){
 }
 
 
-const div = document.querySelector('.products');
+const div = document.querySelector('#products');
 
 // There I render all the following Items using "MAP()" method
 
@@ -297,8 +297,8 @@ function gotocart(){
 let filtereditems = (btn) =>{
     console.log(btn);
     div.innerHTML =  "  ";
-    let filtered =  phones.filter((items) => {
-     return items.brand === btn;
+    let filtered =  phones.filter((item) => {
+     return item.brand === btn;
       //Here start the chaining b/w filter() and map() method
     }).map((items) =>{
         div.innerHTML +=
