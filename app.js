@@ -246,7 +246,7 @@ if(items === null){
 }
 
 
-const div = document.querySelector('#products');
+const div = document.querySelector('.products');
 
 // There I render all the following Items using "MAP()" method
 
