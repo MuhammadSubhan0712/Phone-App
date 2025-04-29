@@ -248,13 +248,12 @@ if(items === null){
 
 const div = document.querySelector('.products');
 
-// There I render all the following Items using "MAP()" method
 
 function renderItems (){
-    for(let i = 0; i < phones.length; i++){
+    for(let i = 0; i < phones.length; i++){ 
         div.innerHTML += `
-        <div id="card" class="card bg-secondary text-light border-light  " style="width: 18rem;">
-        <img src = "${phones[i].img}"  class="" id="card-img"  > 
+        <div id="card" class="card bg-secondary text-light border-light " style="width: 18rem;">
+        <img src = "${phones[i].img}"  class="" id="card-img"> 
             <div class="card-body">
                 <h5 class="card-title">${phones[i].brand +' '+ phones[i].model}</h5>
                 <p class="card-text">Ram: 
@@ -298,12 +297,12 @@ let filtereditems = (btn) =>{
     console.log(btn);
     div.innerHTML =  " "
     let filtered =  phones.filter((item) => {
-     return item.brand === btn
+     return item.brand == btn
       //Here start the chaining b/w filter() and map() method
     }).map((K) => {
         div.innerHTML +=
         `<div id="card" class="card bg-secondary text-light border-light  " style="width: 18rem;">
-        <img src = "${phones[K].img}" class="" id="card-img"  > 
+             <img src = "${phones[K].img}"  class="" id="card-img"> 
             <div class="card-body">
                 <h5 class="card-title">${phones[K].brand +' '+ phones[K].model}</h5>
                 <p class="card-text">Ram 

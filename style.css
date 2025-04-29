@@ -1,110 +1,174 @@
-*{
-  /* font-family: Georgia, 'Times New Roman', Times, serif; */
-}
-/* Phones site */
-
-h1{
-    font-family:'Times New Roman', Times, serif ;
+* {
+    box-sizing: border-box;
 }
 
-span{
-font-family: Georgia, 'Times New Roman', Times, serif;
+body {
+    background: linear-gradient(30deg, rgb(0, 0, 0), rgb(21, 0, 41));
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
 }
 
-#body{
-    background: linear-gradient(30deg, rgb(0, 0, 0) ,rgb(21, 0, 41));
+h1 {
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
-#phone-container{
+
+h1 span {
+    color: #4cc9f0;
+}
+
+/* -------------------------------------------------------- */
+/* Filter btns */
+
+.filter-buttons {
+    gap: 10px;
+    padding: 0 20px;
+}
+
+.filter-btn {
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    margin-top: 10px;
+    padding: 5px;
+    width: 100px;
+    color: #fff;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+#All-items {
+    background-color: rgb(132, 0, 255);
+}
+
+#All-items:hover {
+    color: rgb(255, 194, 194);
+    cursor: pointer;
+}
+
+.filter-btn:not(#All-items) {
+    background-color: rgb(21, 0, 41);
+}
+
+.filter-btn:not(#All-items):hover {
+    color: blue;
+    cursor: pointer;
+}
+
+.filter-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.filter-btn:active {
+    transform: translateY(0);
+}
+
+/* -------------------------------------------------------- */
+/* phone container & cards */
+
+#phone-container {
     font-family: Georgia, Times, 'Times New Roman', serif;
 }
-#card-img{
+
+.card {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+#card-img {
     width: 100%;
-    height: 80%;
+    height: 200px;
+    object-fit: contain;
+    padding: 10px;
+    background-color: white;
 }
 
-#card{
- border-radius: 8px;
- overflow: hidden;
- box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+.card-body {
+    padding: 1.5rem;
 }
 
+.card-title {
+    font-weight: bold;
+    min-height: 3rem;
+}
 
+/* -------------------------------------------------------- */
+/* checkout-btn */
+.checkout-btn {
+    padding: 10px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
 
-/* cart site  */
-#cart-body{
+.checkout-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(72, 199, 116, 0.6);
+}
+
+/* -------------------------------------------------------- */
+/* Cart styling */
+
+#cart-body {
     background-color: rgb(63, 10, 10);
     font-family: Georgia, Times, 'Times New Roman', serif;
 }
-#cart-container{
+
+#cart-container {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     background-color: rgb(145, 92, 45);
     font-family: Georgia, Times, 'Times New Roman', serif;
-
 }
 
-#QP-btn{
-    background-color: green;
+.cart-btn {
     color: white;
-    transition:  0.3s ease-in-out;
-}
-
-#QL-btn{
-background-color: red;
-color: white;
-transition: ease-in-out;
-}
-
-
-#QP-btn:hover{
     transition: 0.3s ease-in-out;
+}
+
+#QP-btn {
+    background-color: green;
+}
+
+#QL-btn {
+    background-color: red;
+}
+
+#QP-btn:hover {
     color: rgb(9, 5, 70);
     cursor: pointer;
 }
 
-#QL-btn:hover{
-    transition: 0.3s ease-in-out;
+#QL-btn:hover {
     color: maroon;
     cursor: pointer;
 }
 
-
-/* Filter button id's */
-
-#All-items{
-margin-top: 10px;
-padding: 5px;
-width: 100px;
-background-color: rgb(132, 0, 255);
-color: #fff;
-font-family:Helvetica, sans-serif ;
-font-size: 20px;
-font-weight: bold;
-border: none;
-transition: 0.2s ease-in-out;
-}
-
-#btn-filter{
-font-family:Helvetica, sans-serif ;
-font-size: 20px;
-font-weight: bold;
- border: none;
-    margin-top: 10px;
-    padding: 5px;
-    width: 100px;
-    background-color: rgb(21, 0, 41);
-    color: #fff;
-}
-
-#All-items:hover{
-color: rgb(255, 194, 194);
-transition: 0.2s ease-in-out;
-cursor: pointer;
-}
-
-#btn-filter:hover{
-    color: blue;
-    transition: 0.2s ease-in-out;
-    cursor: pointer;
+/* -------------------------------------------------------- */
+/* Responsiveness  */
+@media (max-width: 768px) {
+    .filter-buttons {
+        justify-content: center;
+    }
+    
+    .filter-btn {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+        width: auto;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
 }

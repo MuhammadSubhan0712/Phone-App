@@ -10,7 +10,6 @@ function renderItems (){
 
         for(let i = 0; i < cartItems.length; i++){
             console.log(cartItems[i]);
-         
             div.innerHTML += `
             <div id="cart-container" class=" border border-light rounded m-5 p-3">
             <h2>Model: ${cartItems[i].brand + ' ' + cartItems[i].model}</h2>
