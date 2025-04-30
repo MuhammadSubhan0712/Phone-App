@@ -13,7 +13,7 @@ function renderItems (){
             div.innerHTML += `
             <div id="cart-container" class=" border border-light rounded m-5 p-3">
             <h2>Model: ${cartItems[i].brand + ' ' + cartItems[i].model}</h2>
-            <h2>Quantity: <button onclick="plusBtn(${i})" id="QP-btn" >+</button>  ${cartItems[i].quantity}   <button onclick="minusbtn(${i})" id="QL-btn">-</button></h2>
+            <h2>Quantity: <button onclick="plusBtn(${i})" class="btn btn-success"  >+</button>  ${cartItems[i].quantity}   <button onclick="minusbtn(${i})" class="btn btn-danger">-</button></h2>
             <h3>Price: ${cartItems[i].price * cartItems[i].quantity }Rs. </h3>
             <button class="btn btn-danger position-relative" onclick="deletebtn(${i})">Delete</button>
             </div>
@@ -67,6 +67,6 @@ function total() {
     for(let i = 0; i < cartItems.length; i++){
         total = total + (cartItems[i].price * cartItems[i].quantity)
     }
-    totalamt.innerHTML = `<h2 class="text-center"> Total: ${total}  </h2>`
+    totalamt.innerHTML = `<h2 class="text-center"> Total: ${total}Rs.  </h2>`
 }
 total()

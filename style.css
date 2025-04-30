@@ -133,23 +133,6 @@ h1 span {
     transition: 0.3s ease-in-out;
 }
 
-#QP-btn {
-    background-color: green;
-}
-
-#QL-btn {
-    background-color: red;
-}
-
-#QP-btn:hover {
-    color: rgb(9, 5, 70);
-    cursor: pointer;
-}
-
-#QL-btn:hover {
-    color: maroon;
-    cursor: pointer;
-}
 
 /* -------------------------------------------------------- */
 /* Responsiveness  */
