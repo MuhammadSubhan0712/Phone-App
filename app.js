@@ -310,11 +310,12 @@ let filtereditems = (btn) =>{
             <div class="card-body">
                 <h5 class="card-title">${phone.brand +' '+ phone.model}</h5>
                 <p class="card-text">Ram 
-                ${phone.ram} <br> Built-in ${phones[K].rom} <br> Camera ${phones[K].camera} <br>Price: ${phones[K].price}Rs.</p>
-                <button onclick="addtocart(${K})" class="btn btn-primary">Add to Cart</button>
+                ${phone.ram} <br> Built-in ${phones[K].rom} <br> Camera ${phone.camera} <br>Price: ${phone.price}Rs.</p>
+                <button onclick="addtocart(${index})" class="btn btn-primary">Add to Cart</button>
             </div>
         </div>
         `;
-    });
+    }).join(''); //To join the array into single string.
+    div.innerHTML = filtered;
     console.log(filtered);
 };
