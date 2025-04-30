@@ -293,8 +293,8 @@ function gotocart(){
 // There I render only the following Items which user selected using "filter()" method
 //Arrow  Function
 
-let filtereditems = (btn) =>{
-    console.log(btn);
+function filtereditems(btn) {
+    // console.log(btn);
     div.innerHTML =  " "
     // This is to get the brand name either from the button text or passed parameter:
     let brand = typeof btn === 'string' ? btn : btn.innerText.trim();
@@ -305,17 +305,17 @@ let filtereditems = (btn) =>{
       //Here start the chaining b/w filter() and map() method
     }).map((phone, index) => {
         div.innerHTML +=
-        `<div id="card" class="card bg-secondary text-light border-light  " style="width: 18rem;">
-             <img src = "${phone.img}"  class="" id="card-img"> 
+        `<div class="card bg-secondary text-light border-light" style="width: 18rem;">
+             <img src = "${phone.img}" id="card-img"> 
             <div class="card-body">
                 <h5 class="card-title">${phone.brand +' '+ phone.model}</h5>
                 <p class="card-text">Ram 
-                ${phone.ram} <br> Built-in ${phones[K].rom} <br> Camera ${phone.camera} <br>Price: ${phone.price}Rs.</p>
+                ${phone.ram} <br> Built-in ${phone.rom} <br> Camera ${phone.camera} <br>Price: ${phone.price}Rs.</p>
                 <button onclick="addtocart(${index})" class="btn btn-primary">Add to Cart</button>
             </div>
         </div>
         `;
     }).join(''); //To join the array into single string.
-    div.innerHTML = filtered;
-    console.log(filtered);
+    div.innerHTML = filtered();
+    // console.log(filtered);
 };
