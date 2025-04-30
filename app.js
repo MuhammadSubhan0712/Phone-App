@@ -296,17 +296,21 @@ function gotocart(){
 let filtereditems = (btn) =>{
     console.log(btn);
     div.innerHTML =  " "
+    // This is to get the brand name either from the button text or passed parameter:
+    let brand = typeof btn === 'string' ? btn : btn.innerText.trim();
+
+
     let filtered =  phones.filter((item) => {
-     return item.brand == btn
+     return item.brand.toLowerCase() == brand.toLowerCase();
       //Here start the chaining b/w filter() and map() method
-    }).map((K) => {
+    }).map((phone, index) => {
         div.innerHTML +=
         `<div id="card" class="card bg-secondary text-light border-light  " style="width: 18rem;">
-             <img src = "${phones[K].img}"  class="" id="card-img"> 
+             <img src = "${phone.img}"  class="" id="card-img"> 
             <div class="card-body">
-                <h5 class="card-title">${phones[K].brand +' '+ phones[K].model}</h5>
+                <h5 class="card-title">${phone.brand +' '+ phone.model}</h5>
                 <p class="card-text">Ram 
-                ${phones[K].ram} <br> Built-in ${phones[K].rom} <br> Camera ${phones[K].camera} <br>Price: ${phones[K].price}Rs.</p>
+                ${phone.ram} <br> Built-in ${phones[K].rom} <br> Camera ${phones[K].camera} <br>Price: ${phones[K].price}Rs.</p>
                 <button onclick="addtocart(${K})" class="btn btn-primary">Add to Cart</button>
             </div>
         </div>
